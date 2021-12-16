@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Store Clothes</title>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+       <div class="header">
+           <div class="header__img" >
+                 <!-- Header-Top -->
+                <div class="container-fluid">
+                    <div class="header__top">
+                        <div class="header__top-logo">
+                            <img src="img/logo.png" alt="" class="header--logo">
+                        </div>
+                        <div class="header__top-menu">
+                        <div class="header-cart header-position">
+                            <div class="header-cart__icon">
+                                <i class="fas fa-shopping-cart header__top--cart"></i>
+                            </div>
+                            <div class="header-cart__info">
+                                <img src="data:image/png;base64,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" alt="">
+                                <h4 class="cart-notify">No item</h4>
+                            </div>
+                        </div>
+                        <div class="header-navbar header-position">
+                            <div class="header-navbar__icon ">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="header-navbar__menu">
+                                <ul class="navbar-list">
+                                        <li class="navbar-items">Ring</li>
+                                        <li class="navbar-items">Bracelet</li>
+                                        <li class="navbar-items">Necklace</li>
+                                        <li class="navbar-items">Combo (Ring + Necklace)</li>
+                                        <li class="navbar-items">Sale on</li>
+                                    </ul>
+                                    <div class="run-search"></div>
+                                    <div class="login-logout">
+                                        <a>Log in</a>
+                                        <a>Log out</a>
+                                    </div>
+                            </div> 
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+            <!-- End Header-Top -->
+            <!-- Header-Content -->
+            <div class="container-fluid">
+                <div class="header__content">
+                    <div class="header__content-info">
+                        <p class="header__content-date font-diff">Spring 2017</p>
+                        <p class="header__content-topic">IT'S YOUR</p>
+                        <p class="header__content-topic header__content--margin">SHINE TIME</p>
+                        <div class="btn font-diff">DISCOVER NOW</div>
+                    </div>
+                    <div class="header__content-social">
+                        <p>Facebook</p>
+                        <p>Twitter</p>
+                        <p>Instagram</p>
+                        <p>Youtube</p>
+                    </div> 
+                </div>
+            </div>
+            <!-- End Header-Content -->
+           </div>
+        </div>
+        <!-- End Header -->
+        <!-- Main-content -->
+        <div class="main-content">
+            <!-- Main-Strong -->
+            <div class="main-strong">
+                  <div class="strong-text"></div>
+                  <div class="strong-text">
+                    <h3>FREE SHIPPING</h3>
+                    <p>All order over $300</p>
+                  </div>
+                  <div class="strong-text">
+                    <h3>SUPPORT CUSTOMER</h3>
+                    <p>Support 24/7</p>
+                  </div>
+                  <div class="strong-text">
+                    <h3>SECURE PAYMENTS</h3>
+                      <p>Support 24/7</p>
+                  </div>
+                  <div class="strong-text"></div>             
+            </div>
+            <!-- End Main-Strong -->
+            <!-- Main Strong-Text -->
+            <div class="main-content__banner-text">
+                <h2>It started width a simple idea: Great quality, well-desingned<br> products that I wanted myself</h2>
+            </div>
+            <!-- End Main Strong-text -->
+            <!-- Banner-IMG -->
+            <div class="main-img">
+                <div class="container-fluid">
+                   <div class="banner-img banner-margin">
+                        <!-- Banner-img1 -->
+                        <div class="banner-img1 banner-position banner__respon2">
+                            <img src="img/rebanner1.png" alt="">
+                            <div class="information-item">
+                                <h4 class="item-name">Gold&ensp;Leaf&ensp;Ring</h4>
+                                <p class="price"><b>$179.00</b></p>
+                            </div>
+                        </div>
+                    <!-- End Banner-img1 -->
+                   
+                    <!-- Banner-img2 -->
+                    <div class="banner-img2 banner-position banner-middle banner__respon1">
+                            <img src="img/banerbig1.png" alt="" class="banner-big1">
+                        <div class="internal-img2">
+                            <div class="internal-border">
+                                <div class="arrow-img2"></div>
+                                <div class="detail-sale">
+                                    <p class="sale">&ensp;s a l e&ensp;u p&ensp;t o</p>
+                                    <h2 class="sale-number">70%</h2>
+                                    <p class="content-sale">Select&ensp;Gold&ensp;Clearance</p>
+                                    <a href="" class="detail-sale__link">SHOP&ensp;NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Banner-img2 -->
+                    <!-- Banner-img3 -->
+                    <div class="banner-img1 banner-position banner__respon2">
+                        <img src="img/banner2-1.png" alt="">
+                        <div class="information-border">
+                            <div class="contain-information__item">
+                                <h4 class="item-inform font-diff">N E W&ensp;C O L L E C T I O N</h4>
+                                <h2 class="item__text-big">Leaf&ensp;Ring</h2>
+                            </div> 
+                        </div>
+                    </div> 
+                    <!-- End Banner-img3-->
+                    </div>
+                </div>
+                <!--End Banner-IMG  -->
+                <!-- Main Banner2-IMG -->
+                <div class="container-fluid banner2-margin">
+                    <div class="banner-img">
+                    <!-- Banner2-img1 -->
+                    <div class="banner-img1 banner-position banner__respon2">
+                            <img src="img/rebanner4.png" alt="Banner-Girl">
+                    </div>
+                    <!-- End Banner2-img1 -->
+                    <!-- Banner2-img2 -->
+                    <div class="banner-img1 banner-position banner-middle banner__respon2">
+                            <img src="img/rebanner5.png" alt="">
+                        <div class="information-item--ring">
+                            <h4 class="item-name__ring">Rose&ensp;Gold&ensp;Necklaces</h4>
+                            <p class="price__ring"><b>$179.00</b></p>
+                        </div>
+                    </div>
+                    <!-- End Banner2-img2 -->
+                    <!-- Banner2-img3 -->
+                    <div class="banner-img2 banner-position banner__respon1">
+                        <img src="img/banner23.png" alt="" class="banner-big1">
+                        <div class="info-item__img6">
+                            <h3 class="bold1">Princess Ring</h3>
+                            <h3 class="bold1">Rose Gold</h3>
+                            <p class="small">Rose&ensp;gold&ensp;plated&ensp;over&ensp;brass</p>
+                            <p class="small">One&ensp;size</p>
+                        </div>
+                    </div>
+                    <!-- End Banner2-img3 -->
+                    </div>
+                </div>
+                
+            </div>
+            <!-- End Banner-IMG -->
+            <!-- Main Products -->
+            <div class="main-product">
+                <div class="main-product__row container">
+                    <div class="row-text">
+                        <div class="label">
+                            <h3>Featured Items</h3>
+                        </div>
+                        <div class="show-item">
+                            <h3 class="show-item__run">View more</h3>
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <!-- row-item1 -->
+                        <div class="row1-item col-4 row--item1">
+                            <div class="wrap__row1-item row1-position">
+                                 <div class="row1-item__info">
+                                    <div class="row1-item__slick ">
+                                        <img src="img/row1-1.png" alt=""  class="img-below">
+                                    </div>
+                                    <div class="row1-item__slick ">
+                                        <img src="img/row1-1.png" alt=""  class="img-below">
+                                    </div>
+                                    <div class="row1-item__slick ">
+                                        <img src="img/row1-1.png" alt=""  class="img-below">
+                                    </div>
+                                 </div>
+                                <div class="hover--cart">
+                                    <div class="add-cart">
+                                        <div class="add-cart__run">ADD TO CART</div>
+                                        <div class="cart-icon">
+                                            <i class="far fa-heart"></i>
+                                            <i class="fas fa-wifi"></i>
+                                            <i class="fas fa-search icon-last" ></i>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                           
+                           
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">Kubusbowl small</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div>
+                        <!-- End row item1 -->
+                        <!-- row item2 -->
+                        <div class="row1-item col-4 row--item2"> 
+                            <div class="wrap__row1-item row1-position">
+                                <div class="row1-item__info">
+                                   <div class="row1-item__slick ">
+                                       <img src="img/r1-3.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/r1-4.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-2.png" alt=""  class="img-below">
+                                   </div>
+                                </div>
+                               <div class="hover--cart">
+                                   <div class="add-cart">
+                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="cart-icon">
+                                           <i class="far fa-heart"></i>
+                                           <i class="fas fa-wifi"></i>
+                                           <i class="fas fa-search icon-last" ></i>
+                                       </div>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">Kubusbowl small</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div> 
+                        <!-- End row item2 -->
+                        <!-- row item3 -->
+                        <div class="row1-item col-4 row--item3"> 
+                            <div class="wrap__row1-item row1-position">
+                                <div class="row1-item__info">
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-2.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                </div>
+                               <div class="hover--cart">
+                                   <div class="add-cart">
+                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="cart-icon">
+                                           <i class="far fa-heart"></i>
+                                           <i class="fas fa-wifi"></i>
+                                           <i class="fas fa-search icon-last" ></i>
+                                       </div>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">Kubusbowl small</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div>
+                        <!-- End row item3 -->
+                        <!-- row item4 -->
+                        <div class="row1-item col-4 row--item4"> 
+                            <div class="wrap__row1-item row1-position">
+                                <div class="row1-item__info">
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-4.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-2.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                </div>
+                               <div class="hover--cart">
+                                   <div class="add-cart">
+                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="cart-icon">
+                                           <i class="far fa-heart"></i>
+                                           <i class="fas fa-wifi"></i>
+                                           <i class="fas fa-search icon-last" ></i>
+                                       </div>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">Kubusbowl small</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div>
+                        <!-- End row item4 -->
+
+                        <!-- Row2 -->
+                   
+                        <!-- row2-item1 -->
+                         <div class="row1-item col-4 row--item5"> 
+                            <div class="wrap__row1-item row1-position">
+                                <div class="row1-item__info">
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-2.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                </div>
+                               <div class="hover--cart">
+                                   <div class="add-cart">
+                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="cart-icon">
+                                           <i class="far fa-heart"></i>
+                                           <i class="fas fa-wifi"></i>
+                                           <i class="fas fa-search icon-last" ></i>
+                                       </div>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">CobraT hermo Cup</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div>
+                        <!-- End row2 item1 -->
+                        <!-- row2 item2 -->
+                        <div class="row1-item col-4 row--item6"> 
+                            <div class="wrap__row1-item row1-position">
+                                <div class="row1-item__info">
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-3.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                </div>
+                               <div class="hover--cart">
+                                   <div class="add-cart">
+                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="cart-icon">
+                                           <i class="far fa-heart"></i>
+                                           <i class="fas fa-wifi"></i>
+                                           <i class="fas fa-search icon-last" ></i>
+                                       </div>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">CobraT hermo Cup</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div>
+                        <!-- End row2 item2 -->
+                        <!-- row3 item3 -->
+                        <div class="row1-item col-4 row--item7"> 
+                            <div class="wrap__row1-item row1-position">
+                                <div class="row1-item__info">
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                </div>
+                               <div class="hover--cart">
+                                   <div class="add-cart">
+                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="cart-icon">
+                                           <i class="far fa-heart"></i>
+                                           <i class="fas fa-wifi"></i>
+                                           <i class="fas fa-search icon-last" ></i>
+                                       </div>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">Kubusbowl small</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div>
+                        <!-- End row2 item3 -->
+                        <!-- row2 item4 -->
+                        <div class="row1-item col-4 row--item8"> 
+                            <div class="wrap__row1-item row1-position">
+                                <div class="row1-item__info">
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-4.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                   <div class="row1-item__slick ">
+                                       <img src="img/row1-1.png" alt=""  class="img-below">
+                                   </div>
+                                </div>
+                               <div class="hover--cart">
+                                   <div class="add-cart">
+                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="cart-icon">
+                                           <i class="far fa-heart"></i>
+                                           <i class="fas fa-wifi"></i>
+                                           <i class="fas fa-search icon-last" ></i>
+                                       </div>
+                                   </div>
+                                </div>
+                           </div>
+                            <div class="row1-item__detail">
+                                <p class="row1-item__text">Kubusbowl small</p>
+                                <p class="row1-item__price">$19.00</p>
+                            </div>
+                        </div>
+                        <!-- End row2 item4 -->
+                    </div>
+                    <!-- End row2 -->
+                    <!-- End row -->
+                    
+
+                </div>
+            </div>
+            <!-- End Main Products -->
+            <!-- Blog Banner -->
+            <div class="banner-last">
+                <div class="wrap-title">
+                     <h2 class="banner-last__title">Blog update</h2>
+                </div>
+               <div class="container">
+                    <div class="banner-row">
+                        <!-- Banner-lasr1 -->
+                        <div class="banner-last__info  col-3 banner-none">
+                            <img src="img/blog1.png" alt="">
+                            <div class="banner-img__info">
+                                <div class="date font-diff">JULY 14TH, 2016</div>
+                                <div class="img-title">
+                                    <h3>8 Things I've learned form 8 years Bonfire</h3>
+                                </div>
+                                <div class="last-icon font-diff">
+                                    <div class="icon-eyes icon-padding">
+                                        <i class="far fa-eye"></i>
+                                        <span>941views</span>
+                                    </div>
+                                    <div class="icon-thumb icon-padding">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span>26likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Banner-last1 -->
+                        <!-- Banner-last2 -->
+                        <div class="banner-last__info banner-middle--last col-3">
+                            <img src="img/blog23.png" alt="">
+                            <div class="banner-img__info">
+                                <div class="date font-diff">JULY 14TH, 2016</div>
+                                <div class="img-title">
+                                    <h3>How I Stay Inspired and Come Up with New Ideas</h3>
+                                </div>
+                                <div class="last-icon font-diff">
+                                    <div class="icon-eyes icon-padding">
+                                        <i class="far fa-eye"></i>
+                                        <span>941views</span>
+                                    </div>
+                                    <div class="icon-thumb icon-padding">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span>26likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Banner-last2 -->
+                        <!-- Banner-last3 -->
+                        <div class="banner-last__info  col-3">
+                            <img src="img/blog3.png" alt="">
+                            <div class="banner-img__info">
+                                <div class="date font-diff">JULY 14TH, 2016</div>
+                                <div class="img-title">
+                                    <h3>How I Stay Inspired and Come Up with New Ideas</h3>
+                                </div>
+                                <div class="last-icon font-diff">
+                                    <div class="icon-eyes icon-padding">
+                                        <i class="far fa-eye"></i>
+                                        <span>941views</span>
+                                    </div>
+                                    <div class="icon-thumb icon-padding">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span>26likes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Banner-last3 -->
+                    </div>
+                </div>
+                <div class="goto-page">
+                    <a class="goto-link">Go to blog</a>
+                </div>
+            </div>
+            <!-- End Blog Banner -->
+            <!-- Main-Brand -->
+            <div class="main-brand">
+                <div class="list-brand container">
+                    <a href="" class="link-brand"><img src="img/rebrand1.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/rebrand2.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/rebrand3.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/rebrand6.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/rebrand62.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/rebrand6.png" alt=""></a>
+                </div>
+            </div>
+            <!-- End Main-Brand -->
+
+        </div>
+        <!--End Main-content -->
+        <!-- Footer -->
+        <footer class="footer-page">
+            <div class="container footer-edit font-diff">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                       <a><img src="img/logo-last.png" alt=""></a> 
+                    </div>
+                    <div class="footer-menu">
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a class="footer-link footer-hover">HOME</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link footer-hover">ABOUT</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link footer-hover">SERVICES</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link footer-hover">PORTFOLIO</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link footer-hover">PAGES</a>
+                            </li>
+                            <li class="footer-item">
+                                <a class="footer-link footer-hover">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="register footer-hover">
+                        <span><b>SUBCRIBE</b></span>
+                        <i class="far fa-envelope"></i>
+                    </div>
+
+                </div>
+                <div class="footer-bot">
+                    <div class="add-shop footer-hover">
+                        <h4>Cam Pha, Quang Ninh, Viet Nam</h4>
+                    </div>
+                    <div class="footer-social">
+
+                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-facebook"></i></a>
+                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-twitter"></i></a>
+                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-youtube"></i></a>
+                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-skype"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+
+
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/jquery.js"></script>
+</body>
+</html>
