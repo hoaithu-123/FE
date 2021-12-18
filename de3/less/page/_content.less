@@ -230,6 +230,8 @@
         color: var(--text-small);
     }
     .detail-sale__link{
+        letter-spacing: 1px;
+        font-weight: 700;
         font-size: 1.5rem;
         margin-bottom: 22px;
         margin-left: -2px;
@@ -288,7 +290,7 @@
 /**************END Banner-IMG3***********/
 /********Main product******/ 
 .main-product {
-    margin-bottom: 100px;
+    margin-bottom: 101px;
 } 
 /********END Main product******/  
 /**********Row-text*********/
@@ -302,14 +304,26 @@
     .label{
         
         h3{
+            padding-left: 2px;
             margin: 6px 0px 86px 0px;
         }
     }
     .show-item{
+        display: flex;
         .show-item__run{
-            font-size: 1.6rem;
+            font-size: 1.4rem;
+            font-weight: 700;
             letter-spacing: 2px;
-            padding-right: 40px;
+            /* padding-right: 40px; */
+            padding-right: 9px;
+            padding-top: 6px;
+        }
+        .show-item__icon{
+            padding-right: 9px;
+            margin-top: 17px;
+            align-self: auto;
+            font-size: 18px;
+            color: var(--color-price);
         }
         
     }
@@ -434,6 +448,13 @@
     font-size: 1.6rem;
     text-align: center;
     font-weight: bold;
+    .row1-item__text{
+        color:var(--text-primary);
+        padding-top: 2px;
+        font-weight: 400;
+        padding-left: 3px; 
+        font-size: 1.4rem;
+    }
     .row1-item__price{
         color: var(--color-price);
     }
@@ -480,7 +501,10 @@
         background-color: var(--bg-img);
         // DELETE 1720px
         // margin-top: -16px;
-        img{
+        // img{
+        //     width: 100%;
+        // }
+        .img-edit{
             width: 100%;
         }
         .banner-img__info{
@@ -489,7 +513,7 @@
             .date{ 
             // padding: 30px 0px ;
             // DELETE 1720px
-            padding: 24.5px 0px;
+            padding: 25px 0px;
             // padding: 30px 0px 23px 0px;
             letter-spacing: 1px;
             font-size: 1.4rem;
@@ -504,6 +528,7 @@
                 padding-bottom: 47px;
                 letter-spacing: 1px;
                 h3{
+                    padding-top: 1px;
                     margin: 0;
                 }
                 
@@ -512,7 +537,8 @@
         
 
     }
-}  
+}    
+ 
 /************ END Banner-last TEXT IMG********/ 
 /************Banner-last ICON********/ 
 .banner-last__info{
@@ -523,12 +549,13 @@
             font-size: 1.4rem;
             margin-right: 30px;
             border-top: 1px solid var(--text-gray);
-            padding: 24px 0px;
+            padding: 19px 0px;
             span{
                 letter-spacing: 1px;
                 color: var(--text-small);
             }
             .icon-padding{
+                display: flex;
                 padding-right: 20px;
                 
             }
@@ -537,11 +564,30 @@
 }
 /********Banner GOTO-PAGE************/
 .goto-page{
-    padding:60px 0px;
-    font-size: 24px;
-    line-height: 28px;
-    color: #333333;
-    font-weight: 400;
+    position: relative;
+    height: 159px;
+    width: 100%;
+    text-align: center;
+    .goto-link{
+        top: 49%;
+        z-index: 1;
+        position: absolute;
+        font-size: 24px;
+        color:var(--text-primary);
+        font-weight: 400;
+        left: 47.2%;
+    }
+    .goto-bg{
+        z-index: 0;
+        position: absolute;
+        height: 18px;
+        width: 144px;
+        background-color:var(--white-color);
+        /* margin: auto; */
+        left: 46%;
+        top: 54%;
+    }
+
 }
 /**********END Banner GOTO_PAGE********/  
 /************END Banner-last ICON********/ 

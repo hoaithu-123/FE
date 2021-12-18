@@ -188,16 +188,34 @@
        }
    }
    .header__content-social{
-       color: var(--text-social);
        text-align: right;
        margin-bottom: 61px;
        letter-spacing: 2px;
        font-size: 2.5rem;
-       .list-socal{
-           .item-social:hover{
-                color: var(--white-color);
-           }
-           
-       }
    }
+}
+.list-social{
+    .item-social{
+        padding: 14px 0px 0px 0px;
+        .header__link-social{
+            color: var(--text-social);
+            &:hover{
+                color: var(--white-color);
+            }
+        }
+
+    }
+}
+.item-social:hover hr{
+    opacity: 1;
+}
+hr{
+    opacity: 0;
+    border: 1px solid #333;
+    margin-top: -4%;
+    width: 80px;
+    margin-left: 115%;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
 }

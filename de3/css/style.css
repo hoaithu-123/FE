@@ -230,14 +230,32 @@ img {
   font-weight: 700;
 }
 .header__content .header__content-social {
-  color: var(--text-social);
   text-align: right;
   margin-bottom: 61px;
   letter-spacing: 2px;
   font-size: 2.5rem;
 }
-.header__content .header__content-social .list-socal .item-social:hover {
+.list-social .item-social {
+  padding: 14px 0px 0px 0px;
+}
+.list-social .item-social .header__link-social {
+  color: var(--text-social);
+}
+.list-social .item-social .header__link-social:hover {
   color: var(--white-color);
+}
+.item-social:hover hr {
+  opacity: 1;
+}
+hr {
+  opacity: 0;
+  border: 1px solid #333;
+  margin-top: -4%;
+  width: 80px;
+  margin-left: 115%;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 /****************Main-Content**************/
 /***********Main-Strong*****************/
@@ -421,6 +439,8 @@ img {
   color: var(--text-small);
 }
 .detail-sale .detail-sale__link {
+  letter-spacing: 1px;
+  font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 22px;
   margin-left: -2px;
@@ -465,7 +485,7 @@ img {
 /**************END Banner-IMG3***********/
 /********Main product******/
 .main-product {
-  margin-bottom: 100px;
+  margin-bottom: 101px;
 }
 /********END Main product******/
 /**********Row-text*********/
@@ -477,12 +497,26 @@ img {
   color: var(--text-primary);
 }
 .row-text .label h3 {
+  padding-left: 2px;
   margin: 6px 0px 86px 0px;
 }
+.row-text .show-item {
+  display: flex;
+}
 .row-text .show-item .show-item__run {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
   letter-spacing: 2px;
-  padding-right: 40px;
+  /* padding-right: 40px; */
+  padding-right: 9px;
+  padding-top: 6px;
+}
+.row-text .show-item .show-item__icon {
+  padding-right: 9px;
+  margin-top: 17px;
+  align-self: auto;
+  font-size: 18px;
+  color: var(--color-price);
 }
 /***********End row-text******/
 /*************Item-slick Internal**********/
@@ -548,6 +582,13 @@ img {
   text-align: center;
   font-weight: bold;
 }
+.row1-item__detail .row1-item__text {
+  color: var(--text-primary);
+  padding-top: 2px;
+  font-weight: 400;
+  padding-left: 3px;
+  font-size: 1.4rem;
+}
 .row1-item__detail .row1-item__price {
   color: var(--color-price);
 }
@@ -577,7 +618,7 @@ img {
 .banner-row .banner-last__info {
   background-color: var(--bg-img);
 }
-.banner-row .banner-last__info img {
+.banner-row .banner-last__info .img-edit {
   width: 100%;
 }
 .banner-row .banner-last__info .banner-img__info {
@@ -585,7 +626,7 @@ img {
   background-color: var(--white-color);
 }
 .banner-row .banner-last__info .banner-img__info .date {
-  padding: 24.5px 0px;
+  padding: 25px 0px;
   letter-spacing: 1px;
   font-size: 1.4rem;
   color: var(--text-small);
@@ -599,6 +640,7 @@ img {
   letter-spacing: 1px;
 }
 .banner-row .banner-last__info .banner-img__info .img-title h3 {
+  padding-top: 1px;
   margin: 0;
 }
 /************ END Banner-last TEXT IMG********/
@@ -609,22 +651,41 @@ img {
   font-size: 1.4rem;
   margin-right: 30px;
   border-top: 1px solid var(--text-gray);
-  padding: 24px 0px;
+  padding: 19px 0px;
 }
 .banner-last__info .banner-img__info .last-icon span {
   letter-spacing: 1px;
   color: var(--text-small);
 }
 .banner-last__info .banner-img__info .last-icon .icon-padding {
+  display: flex;
   padding-right: 20px;
 }
 /********Banner GOTO-PAGE************/
 .goto-page {
-  padding: 60px 0px;
+  position: relative;
+  height: 159px;
+  width: 100%;
+  text-align: center;
+}
+.goto-page .goto-link {
+  top: 49%;
+  z-index: 1;
+  position: absolute;
   font-size: 24px;
-  line-height: 28px;
-  color: #333333;
+  color: var(--text-primary);
   font-weight: 400;
+  left: 47.2%;
+}
+.goto-page .goto-bg {
+  z-index: 0;
+  position: absolute;
+  height: 18px;
+  width: 144px;
+  background-color: var(--white-color);
+  /* margin: auto; */
+  left: 46%;
+  top: 54%;
 }
 /**********END Banner GOTO_PAGE********/
 /************END Banner-last ICON********/
@@ -713,7 +774,7 @@ img {
   margin-bottom: -3px;
   border: 1px solid;
   font-size: 14px;
-  padding: 10px 25px 10px 16px;
+  padding: 10px 25px 10px 19px;
   letter-spacing: 2px;
 }
 .add-shop {
@@ -735,6 +796,9 @@ img {
 /*************End Footer*****/
 @media all and (max-width: 1720px) {
   /**********Header***********/
+  hr {
+    display: none;
+  }
   .header__img {
     padding: 0px 10px;
   }
