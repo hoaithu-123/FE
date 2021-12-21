@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Store Clothes</title>
 </head>
 <body>
@@ -29,7 +31,8 @@
                         <div class="header__top-menu">
                         <div class="header-cart header-position">
                             <div class="header-cart__icon">
-                                <i class="fas fa-shopping-cart header__top--cart"></i>
+                                <a href="#"><ion-icon name="cart-outline" class="header__top--cart"></ion-icon></a>
+                                <span class="header-cart__sub ">2</span>
                             </div>
                             <div class="header-cart__info">
                                 <img src="data:image/png;base64,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" alt="">
@@ -38,20 +41,20 @@
                         </div>
                         <div class="header-navbar header-position">
                             <div class="header-navbar__icon ">
-                                <i class="fas fa-bars"></i>
+                                <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
                             </div>
                             <div class="header-navbar__menu">
                                 <ul class="navbar-list">
-                                        <li class="navbar-items">Ring</li>
-                                        <li class="navbar-items">Bracelet</li>
-                                        <li class="navbar-items">Necklace</li>
-                                        <li class="navbar-items">Combo (Ring + Necklace)</li>
-                                        <li class="navbar-items">Sale on</li>
+                                        <li class="navbar-items"><a class="nav-items__link" href="">Ring</a></li>
+                                        <li class="navbar-items"><a class="nav-items__link" href="">Bracelet</a></li>
+                                        <li class="navbar-items"><a class="nav-items__link" href="">Necklace</a></li>
+                                        <li class="navbar-items"><a class="nav-items__link" href="">Combo (Ring + Necklace)</a></li>
+                                        <li class="navbar-items"><a class="nav-items__link" href="">Sale on</a></li>
                                     </ul>
                                     <div class="run-search"></div>
                                     <div class="login-logout">
-                                        <a>Log in</a>
-                                        <a>Log out</a>
+                                        <a href="">Log in</a>
+                                        <a href="">Log out</a>
                                     </div>
                             </div> 
                         </div>
@@ -67,30 +70,30 @@
                         <p class="header__content-date font-diff">Spring 2017</p>
                         <p class="header__content-topic">IT'S YOUR</p>
                         <p class="header__content-topic header__content--margin">SHINE TIME</p>
-                        <div class="btn font-diff"><a>DISCOVER NOW</a></div>
+                        <div class="btn font-diff"><a href="">DISCOVER NOW</a></div>
                     </div>
                     <div class="header__content-social">
                         <ul class="list-social">
                             <li class="item-social">
-                                <a class="header__link-social">Facebook</a>
+                                <a href="" class="header__link-social">Facebook</a>
                                 <hr>
                             </li>
                         </ul>
                         <ul class="list-social">
                             <li class="item-social">
-                                <a class="header__link-social">Twitter</a>
+                                <a href="" class="header__link-social">Twitter</a>
                                 <hr>
                             </li>
                         </ul>
                         <ul class="list-social">
                             <li class="item-social">
-                                <a class="header__link-social">Instagram</a>
+                                <a href="" class="header__link-social">Instagram</a>
                                 <hr>
                             </li>
                         </ul>
                         <ul class="list-social">
                             <li class="item-social">
-                                <a class="header__link-social">Youtube</a>
+                                <a href="" class="header__link-social">Youtube</a>
                                 <hr>
                             </li>
                         </ul>
@@ -150,7 +153,7 @@
                                     <p class="sale">&ensp;s a l e&ensp;u p&ensp;t o</p>
                                     <h2 class="sale-number">70%</h2>
                                     <p class="content-sale">Select&ensp;Gold&ensp;Clearance</p>
-                                    <a class="detail-sale__link font-diff">SHOP&ensp;NOW</a>
+                                    <a href="#" class="detail-sale__link font-diff">SHOP&ensp;NOW</a>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +236,7 @@
                                  </div>
                                 <div class="hover--cart">
                                     <div class="add-cart">
-                                        <div class="add-cart__run">ADD TO CART</div>
+                                        <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                         <div class="cart-icon">
                                             <i class="far fa-heart"></i>
                                             <i class="fas fa-wifi"></i>
@@ -266,7 +269,7 @@
                                 </div>
                                <div class="hover--cart">
                                    <div class="add-cart">
-                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                        <div class="cart-icon">
                                            <i class="far fa-heart"></i>
                                            <i class="fas fa-wifi"></i>
@@ -297,7 +300,7 @@
                                 </div>
                                <div class="hover--cart">
                                    <div class="add-cart">
-                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                        <div class="cart-icon">
                                            <i class="far fa-heart"></i>
                                            <i class="fas fa-wifi"></i>
@@ -328,7 +331,7 @@
                                 </div>
                                <div class="hover--cart">
                                    <div class="add-cart">
-                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                        <div class="cart-icon">
                                            <i class="far fa-heart"></i>
                                            <i class="fas fa-wifi"></i>
@@ -362,7 +365,7 @@
                                 </div>
                                <div class="hover--cart">
                                    <div class="add-cart">
-                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                        <div class="cart-icon">
                                            <i class="far fa-heart"></i>
                                            <i class="fas fa-wifi"></i>
@@ -393,7 +396,7 @@
                                 </div>
                                <div class="hover--cart">
                                    <div class="add-cart">
-                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                        <div class="cart-icon">
                                            <i class="far fa-heart"></i>
                                            <i class="fas fa-wifi"></i>
@@ -424,7 +427,7 @@
                                 </div>
                                <div class="hover--cart">
                                    <div class="add-cart">
-                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                        <div class="cart-icon">
                                            <i class="far fa-heart"></i>
                                            <i class="fas fa-wifi"></i>
@@ -455,7 +458,7 @@
                                 </div>
                                <div class="hover--cart">
                                    <div class="add-cart">
-                                       <div class="add-cart__run">ADD TO CART</div>
+                                       <div class="add-cart__run font-diff"><a href="##" class="add-cart_link">ADD TO CART</a></div>
                                        <div class="cart-icon">
                                            <i class="far fa-heart"></i>
                                            <i class="fas fa-wifi"></i>
@@ -491,7 +494,7 @@
                             <div class="banner-img__info">
                                 <div class="date font-diff">JULY 14TH, 2016</div>
                                 <div class="img-title">
-                                    <h3>8 Things I’ve Learned from 8 Years of Bonfire </h3>
+                                   <a href="#" class="link-text__last"><h3>8 Things I’ve Learned from 8 Years of Bonfire </h3></a> 
                                 </div>
                                 <div class="last-icon font-diff">
                                     <div class="icon-eyes icon-padding">
@@ -499,7 +502,7 @@
                                         <span>&ensp;941 Views</span>
                                     </div>
                                     <div class="icon-thumb icon-padding">
-                                        <i class="fas fa-thumbs-up"></i>
+                                        <img src="img/icon__banner-last.png" alt="">
                                         <span>&ensp;27 Likes</span>
                                     </div>
                                 </div>
@@ -512,7 +515,7 @@
                             <div class="banner-img__info">
                                 <div class="date font-diff">JULY 14TH, 2016</div>
                                 <div class="img-title">
-                                    <h3>How I Stay Inspired and Come Up with New Ideas</h3>
+                                   <a href="#" class="link-text__last"><h3>How I Stay Inspired and Come Up with New Ideas</h3></a>
                                 </div>
                                 <div class="last-icon font-diff">
                                     <div class="icon-eyes icon-padding">
@@ -533,7 +536,7 @@
                             <div class="banner-img__info">
                                 <div class="date font-diff">JULY 14TH, 2016</div>
                                 <div class="img-title">
-                                    <h3>Wait, there’s a human on the other end? </h3>
+                                   <a href="#" class="link-text__last"><h3>Wait, there’s a human on the other end? </h3></a>
                                 </div>
                                 <div class="last-icon font-diff">
                                     <div class="icon-eyes icon-padding">
@@ -551,7 +554,7 @@
                     </div>
                 </div>
                 <div class="goto-page">
-                    <a class="goto-link">Go to blog</a>
+                    <a href="" class="goto-link">Go to blog</a>
                     <div class="goto-bg"></div>
                 </div>
             </div>
@@ -559,12 +562,12 @@
             <!-- Main-Brand -->
             <div class="main-brand">
                 <div class="list-brand container">
-                    <a class="link-brand"><img src="img/opbrand1.png" alt=""></a>
-                    <a class="link-brand"><img src="img/rebrand2.png" alt=""></a>
-                    <a class="link-brand"><img src="img/opbrand3.png" alt=""></a>
-                    <a class="link-brand"><img src="img/opbrand6.png" alt=""></a>
-                    <a class="link-brand"><img src="img/opbrand5.png" alt=""></a>
-                    <a class="link-brand"><img src="img/opbrand6.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/opbrand1.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/rebrand2.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/opbrand3.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/opbrand6.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/opbrand5.png" alt=""></a>
+                    <a href="" class="link-brand"><img src="img/opbrand6.png" alt=""></a>
                 </div>
             </div>
             <!-- End Main-Brand -->
@@ -576,27 +579,27 @@
             <div class="container footer-edit font-diff">
                 <div class="footer-top">
                     <div class="footer-logo">
-                       <a><img src="img/logo-last.png" alt=""></a> 
+                       <a href=""><img src="img/logo-last.png" alt=""></a> 
                     </div>
                     <div class="footer-menu">
                         <ul class="footer-list">
                             <li class="footer-item">
-                                <a class="footer-link footer-hover">HOME</a>
+                                <a href="footer--link" class="footer-link footer-hover">HOME</a>
                             </li>
                             <li class="footer-item">
-                                <a class="footer-link footer-hover">ABOUT</a>
+                                <a href="footer--link" class="footer-link footer-hover">ABOUT</a>
                             </li>
                             <li class="footer-item">
-                                <a class="footer-link footer-hover">SERVICES</a>
+                                <a href="footer--link" class="footer-link footer-hover">SERVICES</a>
                             </li>
                             <li class="footer-item">
-                                <a class="footer-link footer-hover">PORTFOLIO</a>
+                                <a href="footer--link" class="footer-link footer-hover">PORTFOLIO</a>
                             </li>
                             <li class="footer-item">
-                                <a class="footer-link footer-hover">PAGES</a>
+                                <a href="footer--link" class="footer-link footer-hover">PAGES</a>
                             </li>
                             <li class="footer-item">
-                                <a class="footer-link footer-hover">CONTACT</a>
+                                <a href="footer--link" class="footer-link footer-hover">CONTACT</a>
                             </li>
                         </ul>
                     </div>
@@ -613,10 +616,10 @@
                     </div>
                     <div class="footer-social">
 
-                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-facebook"></i></a>
-                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-twitter"></i></a>
-                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-youtube"></i></a>
-                        <a class="footer-social__link"><i class="footer-hover__icon fab fa-skype"></i></a>
+                        <a href="footer-social" class="footer-social__link"><i class="footer-hover__icon fab fa-facebook"></i></a>
+                        <a href="footer-social" class="footer-social__link"><i class="footer-hover__icon fab fa-twitter"></i></a>
+                        <a href="footer-social" class="footer-social__link"><i class="footer-hover__icon fab fa-youtube"></i></a>
+                        <a href="footer-social" class="footer-social__link"><i class="footer-hover__icon fab fa-skype"></i></a>
 
                     </div>
                 </div>
